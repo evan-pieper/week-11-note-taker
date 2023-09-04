@@ -37,6 +37,9 @@ async function getNotes () {
   
 
 async function saveNote(note) {  //TODO: fix this function
+  console.log('saveNote function called');
+  const notes = await getNotes();
+  console.log(notes);
   const fetchResponse = await fetch('/api/notes', {
     method: 'POST',
     headers: {
