@@ -1,10 +1,12 @@
 const api = require('express').Router();
+const path = require('path');
 
-api.get('api/notes', (req, res) => {
+api.get('/notes', (req, res) => {
+    console.log('api get notes');
     res.sendFile(path.join(__dirname, '../db/db.json'));
 });
 
-api.post('api/notes', (req, res) => { //posts new note to db.json from the request body
+api.post('/notes', (req, res) => { //posts new note to db.json from the request body
     const newNote = { //creates new note object from request body
         title: req.body.title,
         text: req.body.text,
@@ -12,7 +14,7 @@ api.post('api/notes', (req, res) => { //posts new note to db.json from the reque
     console.log(newNote);
 });
 
-api.delete('api/notes', (req, res) => {
+api.delete('/notes', (req, res) => {
     //res.sendFile(path.join(__dirname, './public/notes.html'));
 });
 
