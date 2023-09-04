@@ -39,7 +39,12 @@ async function getNotes () {
 async function saveNote(note) {  //TODO: fix this function
   console.log('saveNote function called');
   const notes = await getNotes();
-  console.log(notes);
+  //console.log(notes);
+  const noteArray = await notes.json();
+  //console.log(noteArray);
+  note.id = noteArray.length;
+  //console.log(note.id);
+  // might not have to assign ids to the notes in the database, ID could be assigned based on position in the list displayed on the page, then the id could be used to delete the note from the database since they match
   const fetchResponse = await fetch('/api/notes', {
     method: 'POST',
     headers: {

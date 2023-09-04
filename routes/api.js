@@ -11,6 +11,7 @@ api.post('/notes', (req, res) => { //posts new note to db.json from the request 
     const newNote = { //creates new note object from request body
         title: req.body.title,
         text: req.body.text,
+        id: req.body.id,
     };
     console.log(newNote);
 
