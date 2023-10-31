@@ -1,17 +1,12 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text",
+        "title": "note 1",
+        "text": "test test test",
         "id": 0
     },
     {
-        "title": "test note 2",
-        "text": "asdasdasdas",
+        "title": "do the dishes",
+        "text": "waSH EM",
         "id": 1
-    },
-    {
-        "title": "blah",
-        "text": "blah",
-        "id": 2
     }
 ]
